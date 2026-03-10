@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI 8 Puzzle Tutor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>AI 8-Puzzle Tutor</h1>
+
+<div class="select-box">
+
+<h2>Choose Difficulty</h2>
+<label><input type="radio" name="difficulty" value="20" checked> Easy</label>
+<label><input type="radio" name="difficulty" value="40"> Medium</label>
+<label><input type="radio" name="difficulty" value="80"> Hard</label>
+
+<h2>Choose Algorithm</h2>
+<label><input type="radio" name="algo" value="astar" checked> A*</label>
+<label><input type="radio" name="algo" value="bfs"> BFS</label>
+<label><input type="radio" name="algo" value="dfs"> DFS</label>
+
+<h2>Mode</h2>
+<label><input type="radio" name="mode" value="play" checked> Play Yourself</label>
+<label><input type="radio" name="mode" value="ai"> Solve using AI</label>
+
+<br><br>
+
+<button id="startBtn">Start Game</button>
+
+</div>
+
+<script>
+
+document.getElementById("startBtn").addEventListener("click",function(){
+
+let diff=document.querySelector('input[name="difficulty"]:checked').value
+let algo=document.querySelector('input[name="algo"]:checked').value
+let mode=document.querySelector('input[name="mode"]:checked').value
+
+localStorage.setItem("difficulty",diff)
+localStorage.setItem("algo",algo)
+localStorage.setItem("mode",mode)
+
+window.location.href="game.html"
+
+})
+
+</script>
+
+</body>
+</html>
