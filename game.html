@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI 8 Puzzle Tutor</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<h1>8 Puzzle Game</h1>
+
+<p>
+Difficulty: <span id="diff"></span> |
+Algorithm: <span id="algo"></span> |
+Mode: <span id="mode"></span>
+</p>
+
+
+<!-- Puzzle Board -->
+
+<div id="puzzle"></div>
+
+
+
+<!-- Game Buttons -->
+
+<div class="buttons">
+
+<button onclick="startGame()">Start</button>
+
+<button onclick="hint()">Hint</button>
+
+<button onclick="showSteps()">Steps</button>
+
+<button onclick="solveAI()">Solve by AI</button>
+
+<button onclick="restart()">Restart</button>
+
+</div>
+
+
+
+<br>
+
+
+
+<p>Optimal Moves: <span id="optimal">0</span></p>
+
+<p>Your Moves: <span id="moves">0</span></p>
+
+<p>Efficiency: <span id="efficiency">0%</span></p>
+
+<p>Status: <span id="status">Waiting</span></p>
+
+
+
+<!-- Steps Popup -->
+
+<div id="stepsBox" class="popup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closeSteps()">✖</span>
+
+<h3>Solution Steps</h3>
+
+<div id="stepCounter"></div>
+
+<div id="steps"></div>
+
+<div class="step-nav">
+
+<button onclick="prevStep()">Prev</button>
+
+<button onclick="nextStep()">Next</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- Win Popup -->
+
+<div id="winBox" class="popup">
+
+<div class="popup-content">
+
+<h2>🎉 Congratulations, you won!</h2>
+
+<br>
+
+<button onclick="restart()">Restart</button>
+
+</div>
+
+</div>
+
+
+
+<!-- Sounds -->
+
+<audio id="moveSound" src="move.wav"></audio>
+
+<audio id="winSound" src="success_sound.mp3"></audio>
+
+
+
+<script src="script.js"></script>
+
+
+
+<script>
+
+document.getElementById("diff").innerText =
+localStorage.getItem("difficulty")
+
+document.getElementById("algo").innerText =
+localStorage.getItem("algo")
+
+document.getElementById("mode").innerText =
+localStorage.getItem("mode")
+
+</script>
+
+
+
+</body>
+
+</html>

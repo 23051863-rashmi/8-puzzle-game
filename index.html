@@ -1,35 +1,74 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <title>AI 8 Puzzle Tutor</title>
+
+<!-- Stylish Heading Font -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<h1>AI 8-Puzzle Tutor</h1>
+<h1 class="title">AI 8-Puzzle Tutor</h1>
 
 <div class="select-box">
 
 <h2>Choose Difficulty</h2>
-<label><input type="radio" name="difficulty" value="20" checked> Easy</label>
-<label><input type="radio" name="difficulty" value="40"> Medium</label>
-<label><input type="radio" name="difficulty" value="80"> Hard</label>
+
+<div class="option-group">
+
+<input type="radio" id="easy" name="difficulty" value="20" checked>
+<label for="easy" class="tile-option">Easy</label>
+
+<input type="radio" id="medium" name="difficulty" value="40">
+<label for="medium" class="tile-option">Medium</label>
+
+<input type="radio" id="hard" name="difficulty" value="80">
+<label for="hard" class="tile-option">Hard</label>
+
+</div>
+
 
 <h2>Choose Algorithm</h2>
-<label><input type="radio" name="algo" value="astar" checked> A*</label>
-<label><input type="radio" name="algo" value="bfs"> BFS</label>
-<label><input type="radio" name="algo" value="dfs"> DFS</label>
+
+<div class="option-group">
+
+<input type="radio" id="astar" name="algo" value="astar" checked>
+<label for="astar" class="tile-option">A*</label>
+
+<input type="radio" id="bfs" name="algo" value="bfs">
+<label for="bfs" class="tile-option">BFS</label>
+
+<input type="radio" id="dfs" name="algo" value="dfs">
+<label for="dfs" class="tile-option">DFS</label>
+
+</div>
+
 
 <h2>Mode</h2>
-<label><input type="radio" name="mode" value="play" checked> Play Yourself</label>
-<label><input type="radio" name="mode" value="ai"> Solve using AI</label>
 
-<br><br>
+<div class="option-group">
+
+<input type="radio" id="play" name="mode" value="play" checked>
+<label for="play" class="tile-option">Play Yourself</label>
+
+<input type="radio" id="ai" name="mode" value="ai">
+<label for="ai" class="tile-option">Solve using AI</label>
+
+</div>
+
+<br>
 
 <button id="startBtn">Start Game</button>
 
 </div>
+
 
 <script>
 
